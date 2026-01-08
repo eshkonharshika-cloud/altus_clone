@@ -28,6 +28,12 @@ img {
   font-size: clamp(2.5rem, 5vw, 3.5rem);
   line-height: 1.2;
 }
+h1.hero-title {
+    color: white;
+  
+    margin-bottom: 15px;
+    font-weight: bolder;
+}
 
 
 .visually-hidden {
@@ -180,13 +186,13 @@ a.contact-us:hover {
   max-width: 620px;
 }
 
-.hero-section h1 {
+/* .hero-section h1 {
   color: #ffffff;
   font-size: 60px;
   margin-bottom: 20px;
   line-height: 1.2;
   
-}
+} */
 .hero-section p {
   color: #ffffff;
   font-size: 20px;
@@ -591,6 +597,10 @@ ul.footer-links {
   width: 100%;
   height: 220px;
   overflow: hidden;
+}
+
+.card-image {
+  aspect-ratio: 640 / 420;
 }
 
 .card-image img {

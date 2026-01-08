@@ -1,3 +1,32 @@
+
+<!-- No-JS fallback -->
+ 
+
+<!-- Main CSS -->
+ 
+
+<!-- Brand icons -->
+ 
+
+<!-- Solid icons -->
+ 
+
+<!-- Core Font Awesome (REQUIRED) -->
+ 
+<!-- Preconnect -->
+ 
+font-size: 23px;
+ 
+<!-- Preconnect first (must be BEFORE preload) -->
+ 
+<!-- Font Awesome: preload + async apply -->
+ 
+<!-- Main stylesheet -->
+ 
+<!-- Fallback for users with JS disabled -->
+ 
+ aria-hidden="true"
+ 
 h1 {
   font-size: clamp(2rem, 5vw, 3rem);
   line-height: 1.2;

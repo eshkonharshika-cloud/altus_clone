@@ -4,31 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Altus Webpage</title>
+    
+        
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
-    <link rel="preconnect" href="https://altus-clone.vercel.app">
+    <link
+    rel="preload"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/fontawesome.min.css"
+    as="style"
+    crossorigin
+    onload="this.onload=null;this.rel='stylesheet'">
     <link
     rel="preload"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/solid.min.css"
     as="style"
+    crossorigin
     onload="this.onload=null;this.rel='stylesheet'">
     <link
     rel="preload"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/brands.min.css"
     as="style"
+    crossorigin
     onload="this.onload=null;this.rel='stylesheet'">
-    <noscript>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/solid.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/brands.min.css">
-    </noscript>
-
     <link
     rel="preload"
-    href="style.css"
+    href="/style.css"
     as="style"
     onload="this.onload=null;this.rel='stylesheet'">
-
     <noscript>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/solid.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/brands.min.css">
+    <link rel="stylesheet" href="/style.css">
     </noscript>
 
     <meta name="description" content="Altus Group provides commercial real estate intelligence, analytics, and software solutions to power performance and mitigate risk across the CRE lifecycle.">
@@ -82,7 +88,9 @@
             
             <div class="container">
                 <div class="hero-container">
-            <h1>A leading <br>provider of <br>CRE <br>intelligence</h1>
+            <h1 class="hero-title">
+            A leading <br>provider of <br>CRE <br>intelligence
+            </h1>
             <p>We connect data, analytics, applications and expertise to power performance and mitigate risk throughout every phase of the CRE investment lifecycle</p>
             <a class="contact-us" href="#"> Explore solution <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
             <a class="about-us" href="#">About us <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
@@ -201,7 +209,7 @@
 
                     <a href="#" class="press-header-btn">
                     View all press releases
-                    <span aria-hidden="true">›</span>
+                    <span>›</span>
                     </a>
                 </div>
             <div class="container">
