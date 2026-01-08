@@ -4,24 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Altus Webpage</title>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link
+    rel="preload"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    as="style"
+    onload="this.onload=null;this.rel='stylesheet'">
+
+    <noscript>
     <link
         rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-        integrity="sha512-..."
-        crossorigin="anonymous"
-        referrerpolicy="no-referrer"
-        />
-        <noscript>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    </noscript>
 
-        </noscript>
     <link rel="stylesheet" href="style.css">
     <meta name="description" content="Altus Group provides commercial real estate intelligence, analytics, and software solutions to power performance and mitigate risk across the CRE lifecycle.">
 
     <script type="application/ld+json">
         {
         "@context": "https://schema.org",
-        "@type": "WebPage",
+        "@type": "WebSite",
         "name": "Altus Group Clone",
         "url": "https://www.altusgroup.com",
         "potentialAction": {
@@ -39,9 +41,9 @@
         <div class="logo"></div>
         <ul class="nav-links">
             <li><a href="#" aria-label="Search"><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i></a></li>
-            <li class="lang"><a href="#" aria-label="Search"><i class="fa-solid fa-globe" aria-hidden="true"></i>EN</a></li>
-            <li class="contact-support"><a href="#" aria-label="Search"><i class="fa-regular fa-circle-question" aria-hidden="true"></i>Contact Support</a></li>
-            <li class="login"><a href="#" aria-label="Search"><i class="fa-solid fa-user" aria-hidden="true"></i>Login</a></li>
+            <li class="lang"><a href="#" aria-label="Change language"><i class="fa-solid fa-globe" aria-hidden="true"></i>EN</a></li>
+            <li class="contact-support"><a href="#" aria-label="Contact support"><i class="fa-regular fa-circle-question" aria-hidden="true"></i>Contact Support</a></li>
+            <li class="login"><a href="#" aria-label="Login"><i class="fa-solid fa-user" aria-hidden="true"></i>Login</a></li>
         </ul>
     </nav>
 
@@ -64,6 +66,7 @@
 
     <main>
         <section class="hero-section">
+            
             <div class="container">
                 <div class="hero-container">
             <h1>A leading <br>provider of <br>CRE <br>intelligence</h1>
@@ -75,6 +78,7 @@
         </section>
 
         <section class="event-section">
+            <h2 class="visually-hidden">Upcoming Event</h2>
             <div class="container">
                 <article class="event-card">
                     <div class="text-left">
@@ -99,6 +103,7 @@
         </section>
 
         <section class="about-highlight">
+            <h2 class="visually-hidden">About Altus Group</h2>
             <div class="container">
                 
                 <p>For over 20 years, Altus has played a vital role in empowering CRE professionals with the data, analytics, and trusted advice they need to make high-stake decisions – whether to buy, sell, build, or reinvest in commercial real estate assets.<br> <br>The industry’s top leaders rely on our market-leading solutions and expertise to power performance and mitigate risk.</p>
@@ -131,6 +136,8 @@
         </section>
 
         <section class="article-section">
+            <h2 class="visually-hidden">Latest Articles</h2>
+
             <div class="container">
                 <div class="article-grid">
                     
@@ -215,6 +222,7 @@
     </main>
 
     <footer class="footer">
+        <div class="footer-top-section">
         <div class="container">
             <div class="first-footer">
                 <div class="footer-top">
@@ -223,10 +231,10 @@
                     </div>
 
                     <div class="footer-socials">
-                        <a href="#" aria-label="Search"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
-                        <a href="#" aria-label="Search"><i class="fa-brands fa-twitter" aria-hidden="true"></i></a>
-                        <a href="#" aria-label="Search"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
-                        <a href="#" aria-label="Search"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+                        <a href="#" aria-hidden="true"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
+                        <a href="#" aria-hidden="true"><i class="fa-brands fa-twitter" aria-hidden="true"></i></a>
+                        <a href="#" aria-hidden="true"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
+                        <a href="#" aria-hidden="true"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
                     </div>
                 </div>
                 <div class="footer-sublinks">
@@ -277,7 +285,7 @@
                 </div>
 
 
-                </div>
+            </div>
             </div>
             <ul class="footer-links">
                 <li><a href="#">Privacy Policy</a></li>
