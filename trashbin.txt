@@ -1,3 +1,92 @@
+<button ">
+ 
+</button>
+ 
+<button >
+ 
+<h2>Press Release</h2>
+ 
+<button class="press-release"><a href="#"> View all press releases<i class="fa-solid fa-arrow-right"aria-hidden="true"></i></a></button>
+ 
+register-today
+ 
+<a href="#" class="press-cta">
+                    View all press releases
+                    <a href=""></a>
+                    </a>
+ 
+<span class="arrow">→</span>
+ 
+<section class="press-release">
+            <div class="container">
+                <div class="press-content">
+                    <h2>Press Release</h2>
+                    <p>Altus Group Reports Fourth Quarter and Full Year 2025 Results</p>
+                    <a href="#">Read more <i class="fa-solid fa-arrow-right"aria-hidden="true"></i></a>
+                </div>
+            </div>
+ 
+section.press-release
+ 
+/* Read more link */
+ 
+/* Description */
+.card-container p {
+  font-size: 15px;
+  color: #475569;
+  line-height: 1.6;
+  margin: 0;
+}
+
+ 
+<p>Acquisition strengthens Altus Group's position as a leading provider of real estate finance software and data solutions.</p>
+ 
+<p>Acquisition strengthens Altus Group's position as a leading provider of real estate finance software and data solutions.</p>
+ 
+<p>Acquisition strengthens Altus Group's position as a leading provider of real estate finance software and data solutions.</p>
+ 
+/* Image section */
+ 
+/* Content section */
+ 
+/* Title */
+ 
+/* Description */
+ 
+/* Read more link */
+ 
+#c9f31d
+ 
+.card-content {
+    max-width: 520px;
+    
+}
+
+ 
+.article-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+  justify-content: center;
+}
+
+ 
+article
+ 
+<h2>Featured Solutions</h2>
+                    <p>Explore our latest offerings designed to enhance your CRE strategy.</p>
+ 
+featured-card
+ 
+cards
+ 
+/* optional – modern look */
+ 
+/* fixed height like a card */
+ 
+ /* control image size */
+ 
 /* Container */
  
 /* =====================
@@ -221,11 +310,11 @@ altus analytics
  
 about us
  
-<li class="lang"><a href="#"><i class="fa-solid fa-globe"></i>EN</a></li>
-            <li class="contact-support"><a href="#"><i class="fa-regular fa-circle-question"></i>Contact Support</a></li>
-            <li class="login"><a href="#"><i class="fa-solid fa-user"></i>Login</a></li>
+<li class="lang"><a href="#"><i class="fa-solid fa-globe"aria-hidden="true"></i>EN</a></li>
+            <li class="contact-support"><a href="#"><i class="fa-regular fa-circle-question"aria-hidden="true"></i>Contact Support</a></li>
+            <li class="login"><a href="#"><i class="fa-solid fa-user"aria-hidden="true"></i>Login</a></li>
  
-<i class="fa-solid fa-magnifying-glass"></i>
+<i class="fa-solid fa-magnifying-glass"aria-hidden="true"></i>
  
 flex-end
  
