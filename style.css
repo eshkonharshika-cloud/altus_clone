@@ -13,19 +13,20 @@ body {
   font-family: Arial, sans-serif;
 }
 
-h1 {
-  font-size: clamp(2rem, 5vw, 3rem);
-  line-height: 1.2;
-}
-
-section h1 {
-  font-size: inherit;
-}
 
 img {
   height: auto;
   max-width: 100%;
   display: block;
+}
+
+.hero-image {
+  aspect-ratio: 640 / 420;
+}
+
+.hero-title {
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  line-height: 1.2;
 }
 
 
