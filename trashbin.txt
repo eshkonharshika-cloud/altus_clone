@@ -1,0 +1,247 @@
+/* Container */
+ 
+/* =====================
+   TOP FOOTER
+===================== */
+ 
+/* Logo + socials */
+ 
+/* Social icons */
+ 
+/* =====================
+   LINK COLUMNS
+===================== */
+ 
+* =====================
+   FOOTER BOTTOM LINKS
+===================== */
+ 
+/* =====================
+   COPYRIGHT
+===================== */
+ 
+/* =====================
+   RESPONSIVE
+===================== */
+@media (max-width: 900px) {
+  .footer-sublinks {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 500px) {
+  .footer-sublinks {
+    grid-template-columns: 1fr;
+  }
+
+  .footer .container {
+    padding: 60px 24px 30px;
+  }
+}
+
+
+ 
+<img src="" alt="">
+ 
+}
+ 
+.stat-card p {
+ 
+#cbd5f5
+ 
+clamp(40px, 4vw, 56px)
+ 
+#cbd5f5
+ 
+33333
+ 
+</p>
+ 
+</p>
+ 
+#374151;
+ 
+<button class="learn-more
+ 
+<h2>About Altus Group</h2>
+ 
+=
+ 
+auto
+ 
+/* ========== Event Card ========== */
+ 
+/* Date & Location */
+ 
+/* Heading */
+ 
+/* Description */
+ 
+/* ========== CTA Button ========== */
+ 
+/* ========== Right Image ========== */
+ 
+justify-content: center;
+ 
+.event-card {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 48px;
+  background: linear-gradient(90deg, #020617 0%, #001a70 100%);
+  border-radius: 24px;
+  padding: 48px;
+  align-items: center;
+}
+
+.text-left{
+    
+}
+ 
+.event-
+ 
+<section class="register">
+            <div class="register-content">
+
+                <div class="register-text">
+                    <h2> April 13-15, 2025 | terranea - palos <br>verdes, ca</h2>
+                </div>
+            </div>
+
+        </section>
+ 
+flex-direction: column;
+ 
+display: flex;
+ 
+padding-top: 15px;
+ 
+display: flex;
+ 
+br
+ 
+#ffffff
+ 
+border: 2px solid #ffffff;
+ 
+border-radius: 999px;
+ 
+color: #ffffff;
+ 
+border: 2px solid ;
+ 
+#ffffff
+ 
+.hero-section button .contact-us {
+  margin-right: 15px;
+  font-size: 18px;
+}
+ 
+button a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+ 
+ margin-bottom: 20px;
+ 
+20px
+ 
+margin-left: 130px;
+ 
+margin-left: 130px;
+ 
+margin-left: 130px;
+ 
+margin-left: 130px;
+ 
+margin-bottom: 20px;
+ 
+margin-left: 30px;
+ 
+display: flex;
+ 
+.hero-section {
+  height: 75px;
+  width: 100%;
+  background: linear-gradient(90deg, #020617 0%, #001a70 100%);
+  display: flex;
+  align-items: center;
+    padding: 0 60px;
+  box-sizing: border-box;
+}
+ 
+padding: 0 60px;
+  padding-top: 15px;
+ 
+contact
+ 
+contact-us
+ 
+explore solution
+ 
+contact-us
+ 
+learn-more
+ 
+earn more
+ 
+margin: 40px;
+ 
+/* Nav list */
+ 
+
+/* Nav links */
+ 
+/* Contact Us link */
+ 
+.down-navbar .logo {
+  font-size: 28px;
+  font-weight: bold;
+  color: #ffffff;
+}
+ 
+flex-end
+ 
+insights
+ 
+careers
+ 
+altus data solutions
+ 
+software services
+ 
+altus analytics
+ 
+about us
+ 
+<li class="lang"><a href="#"><i class="fa-solid fa-globe"></i>EN</a></li>
+            <li class="contact-support"><a href="#"><i class="fa-regular fa-circle-question"></i>Contact Support</a></li>
+            <li class="login"><a href="#"><i class="fa-solid fa-user"></i>Login</a></li>
+ 
+<i class="fa-solid fa-magnifying-glass"></i>
+ 
+flex-end
+ 
+justify-content: center;
+ 
+<li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+ 
+Altus
+ 
+<a href="index.html">Home</a> |
+        <a href="about.html">About</a> |
+        <a href="services.html">Services</a> |
+        <a href="contact.html">Contact</a>
+ 
+Document
+ 
