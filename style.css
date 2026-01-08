@@ -374,7 +374,7 @@ height: 600px;
 .stat-card h3 {
    font-size: 70px;
   font-weight: 700;
-  color: #d7ec14;
+  color: #020617;
   margin-bottom: 12px;
   letter-spacing: -0.02em;
 }
@@ -382,7 +382,7 @@ height: 600px;
 .stat-card p {
   
   font-size: 16px;
-  color: #ffffff;
+  color: #334155;
   line-height: 1.4;
   max-width: 160px;
   margin: 0 auto;
@@ -479,6 +479,7 @@ height: 600px;
 }
 
 .footer-col a:hover {
+  color: #ffffff;
   text-decoration: underline;
 }
 
