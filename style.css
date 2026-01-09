@@ -20,6 +20,13 @@ img {
   display: block;
 }
 
+i.fa-solid, i.fa-brands, i.fa-regular {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+}
+
+
 .hero-image {
   aspect-ratio: 640 / 420;
 }
@@ -33,6 +40,9 @@ h1.hero-title {
   
     margin-bottom: 15px;
     font-weight: bolder;
+}
+section h1, article h1 {
+  font-size: inherit; /* Or your desired value */
 }
 
 
@@ -82,7 +92,8 @@ h1.hero-title {
   color: #ffffff;
   text-decoration: none;
   font-size: 15px;
-  display: flex;
+  min-width: 1.5em;
+  display: inline-flex;
   align-items: center;
   gap: 6px;
   opacity: 0.95;
