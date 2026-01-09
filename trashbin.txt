@@ -1,3 +1,45 @@
+display: flex;
+ 
+What we offer
+ 
+What we offer
+ 
+What we offer
+ 
+  /* ARTICLE */
+ 
+  /* PRESS */
+ 
+ /* PRESS HEADER */
+ 
+/* ===============================
+   MOBILE RESPONSIVE (1 COLUMN)
+================================ */
+ 
+  /* ARTICLE */
+ 
+  /* PRESS */
+ 
+inline-
+ 
+flex
+ 
+display: flex;
+ 
+50px
+ 
+20px
+ 
+30px
+ 
+/* Stack navbar container */
+ 
+/* Hide menu by default */
+ 
+/* Show menu when open */
+ 
+for icons and navbar heights
+ 
 section h1, article h1 {
   font-size: inherit; /* Or your desired value */
 }
