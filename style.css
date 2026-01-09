@@ -21,9 +21,12 @@ img {
 }
 
 i.fa-solid, i.fa-brands, i.fa-regular {
-  display: inline-block;
-  width: 1em;
-  height: 1em;
+  width: 1.2em;   /* Slightly larger than 1em for breathing room */
+  height: 1.2em;
+  text-align: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 
@@ -32,8 +35,11 @@ i.fa-solid, i.fa-brands, i.fa-regular {
 }
 
 .hero-title {
-  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-size: clamp(2.5rem, 5vw, 3.5rem); /* Already have this */
+  margin: 0; /* Explicitly reset margin if needed */
+  /* Add these for full override */
   line-height: 1.2;
+  font-weight: 800;
 }
 h1.hero-title {
     color: white;
@@ -468,6 +474,7 @@ height: 600px;
 .footer-socials a {
   width: 42px;
   height: 42px;
+  min-width: 42px;
   background: #ffffff;
   color: #020617;
   border-radius: 50%;
