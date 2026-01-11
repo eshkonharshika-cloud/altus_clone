@@ -1,3 +1,106 @@
+<!-- Column 4 -->
+ 
+<!-- Column 3 -->
+ 
+<!-- Column 2 -->
+ 
+<!-- Column 1 -->
+ 
+<!-- Footer Columns -->
+ 
+<!-- Logo + Socials -->
+ 
+<!-- Copyright -->
+ 
+ <!-- Bottom Links -->
+ 
+<!-- Top Section -->
+ 
+px-10
+ 
+max-w-xs
+ 
+semi
+ 
+medium
+ 
+sm
+ 
+semi
+ 
+semi
+ 
+-bold
+ 
+cards
+ 
+max-w-7xl mx-auto px-6 
+ 
+mb-3
+ 
+mb-3
+ 
+mb-3
+ 
+mb-3
+ 
+<!-- ONE GRID -->
+ 
+xtra
+ 
+-medium
+ 
+6xl
+ 
+-2xl
+ 
+-lg
+ 
+Upcoming Event
+ 
+</article>
+ 
+max-h-5 
+ 
+semi
+ 
+semi
+ 
+font-bold
+ 
+py-20
+ 
+py-20
+ 
+blue-500
+ 
+bg-gradient-to-r from-slate-950 to-slate-900
+ 
+ text-red-500 text-4xl font-bold
+ 
+@tailwind base;
+@tailwind components;
+ 
+ /* Footer top only contains logo */
+ 
+  /* Footer links (accordions) */
+ 
+/* Move socials AFTER customer support */
+ 
+/* Divider ABOVE socials */
+ 
+ /* stay on one line */
+ 
+/* ✅ prevents arrow drop */
+ 
+/* ❌ not 100% */
+ 
+/* ✅ keeps arrow aligned */
+ 
+/* 👈 CRITICAL */
+ 
+padding: 0 30px;
+ 
 display: flex;
  
 What we offer
