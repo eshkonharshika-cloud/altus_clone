@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Search</title>
+
+  <!-- Tailwind CSS -->
+  <link rel="stylesheet" href="./tailwind-output.css" />
+
+  <!-- Existing CSS -->
+  <link rel="stylesheet" href="./style.css" />
+
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  />
+
+  <!-- Algolia -->
+  <script src="https://cdn.jsdelivr.net/npm/algoliasearch@4/dist/algoliasearch-lite.umd.js"></script>
+</head>
+
+<body class="min-h-screen bg-gradient-to-r from-[#020617] to-[#001a70] text-white">
+
+  <!-- NAVBAR -->
+  <nav class="top-navbar flex items-center justify-end w-full min-h-[56px] px-8 bg-gradient-to-r from-[#020617] to-[#0b1220]">
+    <ul class="nav-links flex items-center gap-6 text-sm">
+      <li><i class="fa-solid fa-magnifying-glass"></i></li>
+      <li><i class="fa-solid fa-globe"></i> EN</li>
+      <li><i class="fa-regular fa-circle-question"></i> Contact Support</li>
+      <li><i class="fa-solid fa-user"></i> Login</li>
+      <li><a href="index.html">✕</a></li>
+    </ul>
+  </nav>
+
+  <!-- SEARCH SECTION -->
+  <main class="search-page min-h-screen bg-[radial-gradient(circle_at_top,_#0b1a4a,_#020617)] text-white py-20">
+    <div class="search-container max-w-6xl mx-auto px-10">
+
+      <!-- Search Input -->
+      <div class="search-input-wrapper flex items-center gap-3 text-lg">
+        <i class="fa-solid fa-magnifying-glass text-indigo-300"></i>
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Search altusgroup.com"
+          class="search-input w-full bg-transparent outline-none border-none text-white placeholder:text-indigo-300"
+        />
+      </div>
+
+      <!-- Divider -->
+      <hr class="search-divider my-6 h-px border-0 bg-white/30" />
+
+      <!-- DEFAULT CONTENT -->
+      <div
+        id="defaultContent"
+        class="search-layout grid grid-cols-1 md:grid-cols-3 gap-20"
+      >
+        <!-- Recent -->
+        <div class="recent-searches">
+          <h3 class="recent-title text-lime-400 text-sm mb-5"></h3>
+          Suggested
+        </div>
+
+        <!-- Trending -->
+        <div class="trending-searches md:col-span-2">
+          <h3 class="trending-title text-lime-400 text-sm mb-6">
+            Recommended 
+          </h3>
+        </div>
+      </div>
+
+      <!-- ALGOLIA RESULTS (HIDDEN INITIALLY) -->
+      <div
+        id="algoliaResults"
+        class="search-layout grid grid-cols-1 md:grid-cols-3 gap-20 hidden"
+      >
+        <!-- Suggested -->
+        <div class="recent-searches">
+          <h3 class="recent-title text-lime-400 text-sm mb-5">
+             links
+          </h3>
+          <ul id="suggestedLinks" class="recent-list space-y-4"></ul>
+        </div>
+
+        <!-- Recommended -->
+        <div class="trending-searches md:col-span-2">
+          <h3 class="trending-title text-lime-400 text-sm mb-6">
+            insights
+          </h3>
+          <div
+            id="recommendedInsights"
+            class="trending-list flex flex-col gap-7"
+          ></div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- SEARCH JS -->
+  <script src="./search.js"></script>
+
+</body>
+</html>

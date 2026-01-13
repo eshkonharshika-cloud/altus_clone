@@ -1,3 +1,125 @@
+| ${hit.Rating(10)}
+ 
+*/
+ 
+search-layout {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 80px;
+}
+
+ 
+/* =========================
+   SECTION HEADINGS
+========================= */
+ 
+/* =========================
+   SUGGESTED LINKS (LEFT)
+========================= */
+ 
+/* =========================
+   RECOMMENDED INSIGHTS (RIGHT)
+========================= */
+ 
+/* =========================
+   RESPONSIVE (MOBILE)
+========================= */
+
+ 
+| ${hit.Rating(10)}
+ 
+ 📅 ${hit.Year}
+ 
+Trending search you might like
+ 
+Recent searches
+ 
+<div class="trending-list flex flex-col gap-7">
+            <div class="trending-card flex items-center gap-5 cursor-pointer">
+              <img
+                src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f"
+                class="trending-img w-20 h-20 object-cover rounded-md"
+              />
+              <p class="trending-text text-lg font-medium leading-snug">
+                How To Analyze The Canadian Market With Data Studio
+              </p>
+            </div>
+          </div>
+ 
+<ul class="recent-list">
+            <li class="recent-item flex items-center gap-3 cursor-pointer">
+              <i class="fa-regular fa-clock text-white/70"></i>
+              <span>Altus Data Studio | Altus Solutions</span>
+            </li>
+          </ul>
+ 
+<!-- DEFAULT CONTENT -->
+      <div
+        id="defaultContent"
+        class="search-layout grid grid-cols-1 md:grid-cols-3 gap-20"
+      >
+        
+      </div>
+ 
+<!-- Recent -->
+        <div class="recent-searches">
+          <h3 class="recent-title text-lime-400 text-sm mb-5">Recent searches</h3>
+          <ul class="recent-list">
+            <li class="recent-item flex items-center gap-3 cursor-pointer">
+              <i class="fa-regular fa-clock text-white/70"></i>
+              <span>Altus Data Studio | Altus Solutions</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Trending -->
+        <div class="trending-searches md:col-span-2">
+          <h3 class="trending-title text-lime-400 text-sm mb-6">
+            Trending search you might like
+          </h3>
+
+          <div class="trending-list flex flex-col gap-7">
+            <div class="trending-card flex items-center gap-5 cursor-pointer">
+              <img
+                src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f"
+                class="trending-img w-20 h-20 object-cover rounded-md"
+              />
+              <p class="trending-text text-lg font-medium leading-snug">
+                How To Analyze The Canadian Market With Data Studio
+              </p>
+            </div>
+          </div>
+        </div>
+ 
+<!-- SEARCH OVERLAY -->
+<div id="searchOverlay" class="search-overlay">
+  <div class="search-inner">
+    <input
+      id="searchInput"
+      type="text"
+      placeholder="Search movies..."
+      autocomplete="off"
+    />
+
+    <button id="closeSearch">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+  </div>
+
+  <div id="searchResults"></div>
+</div>
+ 
+
+/* style.css */
+ 
+// ===== DOM ELEMENTS =====
+ 
+// ===== OPEN SEARCH =====
+ 
+// ===== CLOSE SEARCH (X BUTTON) =====
+ 
+// ===== CLOSE SEARCH (ESC KEY) =====
+ 
 border
  
  border-white
