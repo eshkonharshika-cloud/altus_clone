@@ -15,6 +15,20 @@ document.addEventListener("DOMContentLoaded", () => {
   const suggestedLinks = document.getElementById("suggestedLinks");
   const recommendedInsights = document.getElementById("recommendedInsights");
 
+  const clearBtn = document.getElementById("clearSearch");
+
+  searchInput.addEventListener("input", async () => {
+  const query = searchInput.value.trim();
+
+  // Show / hide clear button
+  if (query) {
+    clearBtn.classList.remove("hidden");
+  } else {
+    clearBtn.classList.add("hidden");
+  }
+
+});
+
   searchInput.addEventListener("input", async () => {
     const query = searchInput.value.trim();
 
@@ -48,10 +62,10 @@ document.addEventListener("DOMContentLoaded", () => {
     hits.slice(0, 5).forEach(hit => {
       suggestedLinks.innerHTML += `
         <li class="recent-item cursor-pointer">
-           <div class="trending-card flex items-center gap-5 cursor-pointer">
-          <div class="w-20 h-20 bg-white/10 rounded-md flex items-center justify-center">
-            🎬
-          </div>
+           <div class="trending-card flex items-center gap-5 cursor-pointer mb-6">
+            <div class="flex">
+              <i class="fa fa-clock ml-auto"></i>
+            </div>
 
           <div>
             <p class="trending-text text-lg font-medium">

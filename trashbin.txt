@@ -1,3 +1,84 @@
+ <div class="stat-card">
+                <h3 class="text-lime-400 text-4xl sm:text-5xl lg:text-6xl font-extrabold">
+                ~1,800
+                </h3>
+                <p class="text-white text-sm sm:text-base tracking-wide">
+                professionals worldwide
+                </p>
+            </div>
+
+            <div class="stat-card">
+                <h3 class="text-lime-400 text-4xl sm:text-5xl lg:text-6xl font-extrabold">
+                85+
+                </h3>
+                <p class="text-white text-sm sm:text-base tracking-wide">
+                countries served
+                </p>
+            </div>
+
+            <div class="stat-card">
+                <h3 class="text-lime-400 text-4xl sm:text-5xl lg:text-6xl font-extrabold">
+                20+
+                </h3>
+                <p class="text-white text-sm sm:text-base tracking-wide">
+                years listed on TSX
+                </p>
+            </div>
+
+            <div class="stat-card">
+                <h3 class="text-lime-400 text-4xl sm:text-5xl lg:text-6xl font-extrabold">
+                30+
+                </h3>
+                <p class="text-white text-sm sm:text-base tracking-wide">
+                years developing CRE software
+                </p>
+            </div>
+ 
+ <!-- DEFAULT CONTENT -->
+ 
+hidden
+ 
+<!-- Search Icon -->
+  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-indigo-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 1112 4.5a7.5 7.5 0 014.65 12.15z" />
+  </svg>
+ 
+<button
+        id="clearSearch"
+        class="clear-search hidden absolute left-0 text-indigo-300 hover:text-white text-xl"
+        aria-label="Clear search"
+      >
+        
+      </button>
+ 
+<button id="clearSearch" class="clear-search absolute flex justify-end right-3 top-1/2 -translate-y-1/2 text-indigo-300">
+          <i class="fa-solid fa-xmark"></i>
+      </div>
+
+ 
+hidden
+ 
+<!-- ❌ Clear button -->
+        <button
+          id="clearSearch"
+          class="clear-search absolute flex justify-end right-0 text-indigo-300 hover:text-white text-xl"
+          aria-label="Clear search"
+        >
+          ×
+        </button>
+ 
+hidden 
+ 
+class="mr-10"
+ 
+color: white;
+ 
+margin-bottom: 10px;
+ 
+<div class="w-20 h-20 bg-white/10 rounded-md flex items-center justify-center">
+            🎬
+          </div>
+ 
 | ${hit.Rating(10)}
  
 */

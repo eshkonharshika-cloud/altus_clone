@@ -45,6 +45,14 @@
     <!-- Your CSS -->
     <!-- <link rel="stylesheet" href="/style.css"> -->
     <meta name="description" content="Altus Group provides commercial real estate intelligence, analytics, and software solutions to power performance and mitigate risk across the CRE lifecycle.">
+    <!-- Contentful SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/contentful@latest/dist/contentful.browser.min.js"></script>
+
+    <!-- Algolia SDK (MISSING EARLIER) -->
+    <script src="https://cdn.jsdelivr.net/npm/algoliasearch@4/dist/algoliasearch-lite.umd.js"></script>
+
+    <!-- Your scripts -->
+    <script src="./contentful.js" defer></script>
     <script src="./search.js" defer></script>
     <script type="application/ld+json">
         {
@@ -116,97 +124,120 @@
     </header>
 
     <main>
-        <section class="hero-section w-full min-h-screen bg-gradient-to-r from-[#020617] to-[#001a70] text-white">
+         <section class="hero-section w-full min-h-screen bg-gradient-to-r from-[#020617] to-[#001a70] text-white">
 
             <div class="container max-w-7xl mx-auto px-8 sm:px-16 lg:px-32 flex items-start min-h-screen pt-24">
-                <div class="hero-container max-w-2xl space-y-6">
-            <h1 class="hero-title text-white font-extrabold leading-tight text-4xl sm:text-5xl lg:text-6xl">
-            A leading <br>provider of <br>CRE <br>intelligence
+            <div class="hero-container max-w-2xl space-y-6">
+            <h1
+            id="hero-title"
+            class="hero-title text-white font-extrabold leading-tight text-4xl sm:text-5xl lg:text-6xl">
             </h1>
-            <p class="mt-6 text-slate-200 text-base sm:text-lg leading-relaxed">We connect data, analytics, applications and expertise to <br> power performance and mitigate risk throughout every <br>phase of the CRE investment lifecycle</p>
+
+            <p
+            id="hero-description"
+            class="mt-6 text-slate-200 text-base sm:text-lg leading-relaxed">
+            </p>
+
             <div class="hero-button mt-10 flex flex-col sm:flex-row gap-4">
-            <a class="contact-us inline-flex items-center justify-center gap-2 bg-lime-400 text-lg text-black px-6 py-3 rounded-full font-bold hover:bg-blue-500 hover:text-white transition" href="#"> Explore solution <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
-            <a class="about-us inline-flex items-center justify-center gap-2  text-lg text-white px-6 py-3 rounded-full font-bold hover:bg-white hover:text-black transition" href="#">About us <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+
+            <a
+                id="hero-primary-btn"
+                class="contact-us inline-flex items-center justify-center gap-2 bg-lime-400 text-lg text-black px-6 py-3 rounded-full font-bold hover:bg-blue-500 hover:text-white transition"
+                href="#">
+                <span></span>
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+            <a
+                id="hero-secondary-btn"
+                class="about-us inline-flex items-center justify-center gap-2 text-lg text-white px-6 py-3 rounded-full font-bold hover:bg-white hover:text-black transition"
+                href="#">
+                <span></span>
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
             </div>
-            </div>
+
             </div>
         </section>
 
-        <section class="event-section w-full bg-white py-20">
-            <h2 class="visually-hidden text-white">event card</h2>
-            <div class="container max-w-7xl mx-auto px-6">
-                <article class="event-card max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-center bg-gradient-to-r from-slate-950 to-blue-900 rounded-3xl p-8 sm:p-12 lg:p-16">
-                    <div class="text-left max-w-xl">
-                        <p class="event-title text-lime-400 uppercase text-sm font-bold tracking-wide mb-4">
-                            <time datetime="2026-04-13">APRIL 13–15, 2026</time>
-                            <span class="mx-2 text-white">|</span>
-                                TERRANEA – PALOS VERDES, CA
-                        </p>
+    <section class="event-section w-full bg-white py-20">
+        <h2 class="visually-hidden text-white">event card</h2>
 
-                        <h2 class="text-white font-extrabold leading-tight text-3xl sm:text-4xl lg:text-5xl mb-6">Altus Connect<br>2026</h2>
-                        <p class="event-info text-slate-200 text-base sm:text-lg mb-8 max-w-md">
-                            Two days of big ideas, real conversations, and connections that drive results.
-                        </p>
+        <div class="container max-w-7xl mx-auto px-6">
+            <article
+            class="event-card max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-center bg-gradient-to-r from-slate-950 to-blue-900 rounded-3xl p-8 sm:p-12 lg:p-16"
+            >
+            <!-- LEFT CONTENT -->
+            <div class="text-left max-w-xl">
 
-                        <a class="register-today inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-800 transition" href="#">Register for Early bird tickets <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
-                    </div>
+                <!-- DATE + LOCATION -->
+                <p
+                class="event-title text-lime-400 uppercase text-sm font-bold tracking-wide mb-4"
+                >
+                <time id="event-date"></time>
+                <span class="mx-2 text-white">|</span>
+                <span id="event-location"></span>
+                </p>
 
-                    <div class="image-right w-full h-64 sm:h-72 lg:h-96 overflow-hidden rounded-2xl">
-                        <img src="Homepage_2.webp" alt="Altus Connect 2026 commercial real estate conference" width="640" height="420" fetchpriority="high" loading="eager" decoding="async">
-                    </div>
-                </article>
+                <!-- EVENT NAME -->
+                <h2
+                id="event-name"
+                class="text-white font-extrabold leading-tight text-3xl sm:text-4xl lg:text-5xl mb-6"
+                ></h2>
+
+                <!-- DESCRIPTION -->
+                <p
+                id="event-description"
+                class="event-info text-slate-200 text-base sm:text-lg mb-8 max-w-md"
+                ></p>
+
+                <!-- BUTTON -->
+                <a
+                id="event-button"
+                class="register-today inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-800 transition"
+                href="#"
+                >
+                <span></span>
+                <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                </a>
             </div>
+
+            <!-- RIGHT IMAGE -->
+            <div
+                class="image-right w-full h-64 sm:h-72 lg:h-96 overflow-hidden rounded-2xl"
+            >
+                <img
+                id="event-image"
+                src=""
+                alt=""
+                class="w-full h-full object-cover"
+                loading="eager"
+                decoding="async"
+                />
+            </div>
+            </article>
+        </div>
         </section>
 
         <section class="about-highlight min-h-screen bg-gradient-to-r from-slate-950 to-blue-900 py-24 sm:py-22 lg:py-30 lg:px-10">
-            <h2 class="visually-hidden sr-only">About Altus Group</h2>
-            <div class="container max-w-5xl mx-auto px-17">
-                
-                <p class="text-white text-center py-10 text-xl sm:text-3xl lg:text-4xl font-bold leading-tight tracking-tight max-w-3xl mx-auto">For over 20 years, Altus has played a vital role in empowering CRE professionals with the data, analytics, and trusted advice they need to make high-stake decisions – whether to buy, sell, build, or reinvest in commercial real estate assets.<br> <br>The industry’s top leaders rely on our market-leading solutions and expertise to power performance and mitigate risk.</p>
-            </div>
+        <h2 class="visually-hidden sr-only">About Altus Group</h2>
+
+        <div class="container max-w-5xl mx-auto px-17">
+            <p
+            id="about-highlight-description"
+            class="text-white text-center py-10 text-xl sm:text-3xl lg:text-4xl font-bold leading-tight tracking-tight max-w-3xl mx-auto"
+            >
+            <!-- Contentful content will load here -->
+            </p>
+        </div>
         </section>
 
 
-       <section class="stats-section bg-gradient-to-r from-slate-950 to-blue-900 py-20 sm:py-24 lg:py-28">
+       <section class="stats-section bg-gradient-to-r from-slate-950 to-blue-900 py-20 sm:py-15 lg:py-28">
         <div class="max-w-7xl mx-auto px-6">
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-1 ml-6 mr-6  text-center">
-
-            <div class="stat-card">
-                <h3 class="text-lime-400 text-4xl sm:text-5xl lg:text-6xl font-extrabold">
-                ~1,800
-                </h3>
-                <p class="text-white text-sm sm:text-base tracking-wide">
-                professionals worldwide
-                </p>
-            </div>
-
-            <div class="stat-card">
-                <h3 class="text-lime-400 text-4xl sm:text-5xl lg:text-6xl font-extrabold">
-                85+
-                </h3>
-                <p class="text-white text-sm sm:text-base tracking-wide">
-                countries served
-                </p>
-            </div>
-
-            <div class="stat-card">
-                <h3 class="text-lime-400 text-4xl sm:text-5xl lg:text-6xl font-extrabold">
-                20+
-                </h3>
-                <p class="text-white text-sm sm:text-base tracking-wide">
-                years listed on TSX
-                </p>
-            </div>
-
-            <div class="stat-card">
-                <h3 class="text-lime-400 text-4xl sm:text-5xl lg:text-6xl font-extrabold">
-                30+
-                </h3>
-                <p class="text-white text-sm sm:text-base tracking-wide">
-                years developing CRE software
-                </p>
-            </div>
+            <div  id="stats-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-1 ml-6 mr-6  text-center">
 
             </div>
         </div>
@@ -214,105 +245,43 @@
 
 
         <section class="article-section w-full bg-white py-20 px-6 sm:px-16 lg:px-32">
-            <h2 class="visually-hidden sr-only">Latest insights</h2>
+        <h2 class="visually-hidden sr-only">Latest insights</h2>
 
-            <div class="container max-w-7xl mx-auto px-6">
-                <div class="article-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
-                    
-                    <article class="cards bg-white rounded-xl shadow-sm hover:shadow-lg transition overflow-hidden">
-                        <div class="card-image  h-52 overflow-hidden">
-                            <img src="https://www.altusgroup.com/_next/image/?url=https%3A%2F%2Fimages.ctfassets.net%2F8jgyidtgyr4v%2F6QNV6HFkDC9BmWJFos6jqZ%2Fd987a17e301264943e04986c62397338%2FInsight_758_Hero.png&w=1920&q=75" alt="Article Image" width="640" height="420" loading="lazy">
-                        </div>
-                        <div class="card-container p-6">
-                        <time class="card-date block text-base text-gray-500 mb-2" datetime="2025-12-16">Dec 16, 2025</time>
-                        <h3 class="text-2xl font-bold text-slate-900 mb-6 leading-snug">Canadian commercial real estate market update – Q3 2025</h3>
-                        
-                        <a href="#" class="inline-flex items-center gap-2 text-blue-600 font-bold text-lg hover:gap-3 transition-all">Read more <i class="fa-solid fa-arrow-right text-sm" aria-hidden="true"></i></a>
-                        </div>
-                        
-                    </article>
-
-                    <article class="cards bg-white rounded-xl shadow-sm hover:shadow-lg transition overflow-hidden">
-                        <div class="card-image  h-52 overflow-hidden">
-                            <img src="https://www.altusgroup.com/_next/image/?url=https%3A%2F%2Fimages.ctfassets.net%2F8jgyidtgyr4v%2F4OywSFzoCvl5MXNWUeXQrT%2F720d4d35e22678c8305117e77c5bf519%2FGettyImages-1276035945_0.25x.jpg&w=1920&q=75" alt="Article Image" width="640" height="420"  loading="lazy">
-                        </div>
-                        <div class="card-container p-6">
-                        <time class="card-date block text-base text-gray-500 mb-2" datetime="2025-12-16">Dec 16, 2025</time>
-                        <h3 class="text-2xl font-bold text-slate-900 mb-6 leading-snug">Investors revisit US malls amid mixed consumer signals</h3>
-                        
-                        <a href="#" class="inline-flex items-center gap-2 text-blue-600 font-bold text-lg hover:gap-3 transition-all">Read more <i class="fa-solid fa-arrow-right text-sm" aria-hidden="true"></i></a>
-                        </div>
-                        
-                    </article>
-
-                    <article class="cards bg-white rounded-xl shadow-sm hover:shadow-lg transition overflow-hidden">
-                        <div class="card-image  h-52 overflow-hidden">
-                            <img src="https://www.altusgroup.com/_next/image/?url=https%3A%2F%2Fimages.ctfassets.net%2F8jgyidtgyr4v%2F7p46oBUTGguDhsvXY4kg4R%2Fda92780316d0380c21520c54da215ba3%2FCRE-Exchange-Card-Banner-2025-rebrand.jpg&w=1920&q=75" alt="Article Image" width="640" height="420" loading="lazy">
-                        </div>
-                        <div class="card-container p-6">
-                        <time class="card-date block text-base text-gray-500 mb-2" datetime="2025-12-16">Dec 16, 2025</time>
-                        <h3 class="text-2xl font-bold text-slate-900 mb-6 leading-snug">Multifamily myth busting, data, and what actually matters</h3>
-                        <a href="#" class="inline-flex items-center gap-2 text-blue-600 font-bold text-lg hover:gap-3 transition-all">Read more <i class="fa-solid fa-arrow-right text-sm" aria-hidden="true"></i></a>
-                        </div>
-                        
-                    </article>
-                </div>
+        <div class="container max-w-7xl mx-auto px-6">
+            <div
+            id="article-grid"
+            class="article-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10"
+            >
+            <!-- Articles injected here -->
             </div>
+        </div>
         </section>
 
         <section class="press-release bg-white px-15 py-16">
-    
-  
-    <div class="max-w-6xl mx-auto px-6 py-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-12">
-        <h2 class="text-4xl font-bold text-blue-900">
-        Press releases
-        </h2>
 
-        <a
-        href="#"
-        class="press-header-btn flex items-center gap-2 bg-blue-700 text-white px-10 py-2 rounded-full text-lg font-semibold hover:bg-blue-800 transition"
-        >
-        View all press releases
-        <span class="text-lg">›</span>
-        </a>
-    </div>
+        <div class="press-header max-w-6xl mx-auto px-6 py-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-12">
+            <h2 class="text-4xl font-bold text-blue-900">
+            Press releases
+            </h2>
 
-   
-    <div class="container max-w-6xl mx-auto px-6">
-        <div class="press-list grid grid-cols-1 md:grid-cols-3 gap-10">
-
-        <!-- Item 1 -->
-        <article class="press-item">
-            <span class="press-date block text-base text-gray-500 mb-3">
-            Jan 6, 2026
-            </span>
-            <h3 class="press-title text-xl font-bold text-blue-900 leading-snug">
-            Altus Group Appoints Rich Sarkis as Chief Commercial Officer
-            </h3>
-        </article>
-
-        <!-- Item 2 -->
-        <article class="press-item">
-            <span class="press-date block text-base text-gray-500 mb-3">
-            Dec 15, 2025
-            </span>
-            <h3 class="press-title text-xl font-bold text-blue-900 leading-snug">
-            Altus Group announces Exemptive Relief from the Ontario Securities
-            </h3>
-        </article>
-
-        <!-- Item 3 -->
-        <article class="press-item">
-            <span class="press-date block text-base text-gray-500 mb-3">
-            Nov 26, 2025
-            </span>
-            <h3 class="press-title text-xl font-bold text-blue-900 leading-snug">
-            Altus Group announces commencement of substantial issuer bid
-            </h3>
-        </article>
-
+            <a
+            href="#"
+            class="press-header-btn flex items-center gap-2 bg-blue-700 text-white px-10 py-2 rounded-full text-lg font-semibold hover:bg-blue-800 transition"
+            >
+            View all press releases
+            <span class="text-lg">›</span>
+            </a>
         </div>
-    </div>
+
+        <div class="container max-w-6xl mx-auto px-6">
+            <div
+            id="press-list"
+            class="press-list grid grid-cols-1 md:grid-cols-3 gap-10"
+            >
+            <!-- Press items injected here -->
+            </div>
+        </div>
+
         </section>
 
 

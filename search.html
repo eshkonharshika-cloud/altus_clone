@@ -24,13 +24,14 @@
 <body class="min-h-screen bg-gradient-to-r from-[#020617] to-[#001a70] text-white">
 
   <!-- NAVBAR -->
-  <nav class="top-navbar flex items-center justify-end w-full min-h-[56px] px-8 bg-gradient-to-r from-[#020617] to-[#0b1220]">
+  <nav class="top-navbar flex items-end justify-end w-full min-h-[56px] px-8 bg-gradient-to-r from-[#020617] to-[#0b1220]">
     <ul class="nav-links flex items-center gap-6 text-sm">
       <li><i class="fa-solid fa-magnifying-glass"></i></li>
       <li><i class="fa-solid fa-globe"></i> EN</li>
       <li><i class="fa-regular fa-circle-question"></i> Contact Support</li>
       <li><i class="fa-solid fa-user"></i> Login</li>
-      <li><a href="index.html">✕</a></li>
+      <li><a href="index.html" >✕</a></li>
+      </a></li>
     </ul>
   </nav>
 
@@ -47,54 +48,58 @@
           placeholder="Search altusgroup.com"
           class="search-input w-full bg-transparent outline-none border-none text-white placeholder:text-indigo-300"
         />
+        <button
+        id="clearSearch"
+        class="clear-search hidden absolute left-0 text-indigo-300 hover:text-white text-xl"
+        aria-label="Clear search"
+      >
+        
+      </button>
       </div>
 
       <!-- Divider -->
       <hr class="search-divider my-6 h-px border-0 bg-white/30" />
 
       <!-- DEFAULT CONTENT -->
-      <div
-        id="defaultContent"
-        class="search-layout grid grid-cols-1 md:grid-cols-3 gap-20"
-      >
-        <!-- Recent -->
-        <div class="recent-searches">
-          <h3 class="recent-title text-lime-400 text-sm mb-5"></h3>
-          Suggested
-        </div>
+     
+<div
+  id="defaultContent"
+  class="search-layout grid grid-cols-1 gap-10 md:grid-cols-3"
+>
+  <!-- Suggested Links -->
+  <div class="recent-searches">
+    <h3 class="recent-title text-lime-400 text-sm mb-5">
+      Suggested Links
+    </h3>
+  </div>
 
-        <!-- Trending -->
-        <div class="trending-searches md:col-span-2">
-          <h3 class="trending-title text-lime-400 text-sm mb-6">
-            Recommended 
-          </h3>
-        </div>
-      </div>
+  <!-- Recommended Insights -->
+  <div class="trending-searches md:col-span-2">
+    <h3 class="trending-title text-lime-400 text-sm mb-6">
+      Recommended Insights
+    </h3>
+  </div>
+</div>
 
-      <!-- ALGOLIA RESULTS (HIDDEN INITIALLY) -->
-      <div
-        id="algoliaResults"
-        class="search-layout grid grid-cols-1 md:grid-cols-3 gap-20 hidden"
-      >
-        <!-- Suggested -->
-        <div class="recent-searches">
-          <h3 class="recent-title text-lime-400 text-sm mb-5">
-             links
-          </h3>
-          <ul id="suggestedLinks" class="recent-list space-y-4"></ul>
-        </div>
+<!-- ALGOLIA RESULTS (HIDDEN INITIALLY) -->
+<div
+  id="algoliaResults"
+  class="search-layout grid grid-cols-1 gap-10 md:grid-cols-3 "
+>
+  <!-- Suggested Links -->
+  <div class="recent-searches">
+    <ul id="suggestedLinks" class="recent-list space-y-4"></ul>
+  </div>
 
-        <!-- Recommended -->
-        <div class="trending-searches md:col-span-2">
-          <h3 class="trending-title text-lime-400 text-sm mb-6">
-            insights
-          </h3>
-          <div
-            id="recommendedInsights"
-            class="trending-list flex flex-col gap-7"
-          ></div>
-        </div>
-      </div>
+  <!-- Recommended Insights -->
+  <div class="trending-searches md:col-span-2">
+    <div
+      id="recommendedInsights"
+      class="trending-list flex flex-col gap-7"
+    ></div>
+  </div>
+</div>
+
 
     </div>
   </main>
